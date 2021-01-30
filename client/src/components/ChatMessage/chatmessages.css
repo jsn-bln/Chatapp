@@ -1,0 +1,113 @@
+.recieved {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 10px;
+}
+
+.recieved .message-item {
+  font-family: 'Lato', sans-serif;
+  -webkit-box-flex: 15;
+      -ms-flex: 15;
+          flex: 15;
+}
+
+.recieved .message-item .message-text {
+  color: #303030;
+  background-color: #edf2fb;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 5px 10px;
+  margin: 2px 5px;
+  border-radius: 5px;
+}
+
+.recieved .message-item .message-sender {
+  font-size: .8em;
+  margin-left: 10px;
+}
+
+.recieved .message-item .message-date {
+  font-size: .5em;
+  font-family: 'Lato', sans-serif;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.recieved .profile-pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.sent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 10px;
+}
+
+.sent .message-item {
+  -webkit-box-flex: 15;
+      -ms-flex: 15;
+          flex: 15;
+  font-family: 'Lato', sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.sent .message-item .message-text {
+  color: #303030;
+  background-color: #3a86ff;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 5px 10px;
+  margin: 2px 5px;
+  border-radius: 5px;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.sent .message-item .message-sender {
+  font-size: .8em;
+  margin-left: 10px;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.sent .message-item .message-date {
+  font-size: .5em;
+  font-family: 'Lato', sans-serif;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.sent .profile-pic {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+/*# sourceMappingURL=chatmessages.css.map */

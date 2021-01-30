@@ -1,0 +1,28 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: url("./final.gif");
+  background-size: cover;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: grey transparent;
+}
+
+*::-webkit-scrollbar {
+  width: 5px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: grey;
+  border-radius: 5px;
+}
+
+@media (max-width: 700px) {
+  body {
+    background: url("./final.gif");
+    background-size: cover;
+  }
+}
+/*# sourceMappingURL=styles.css.map */

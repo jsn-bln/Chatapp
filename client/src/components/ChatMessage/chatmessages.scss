@@ -1,0 +1,77 @@
+.recieved{
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    .message-item{
+        font-family: 'Lato', sans-serif;
+        flex: 15;
+        .message-text{
+            color: #303030;
+            background-color: #edf2fb;
+            width: fit-content;
+            padding: 5px 10px;
+            margin: 2px 5px;
+            border-radius: 5px;
+            
+        }
+        .message-sender{
+            font-size: .8em;
+            margin-left: 10px;
+        }
+        .message-date{
+            font-size: .5em;
+            font-family: 'Lato', sans-serif;
+            align-self: flex-end;
+        }
+    
+    }
+    .profile-pic{
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        flex: 1;
+    }
+}
+
+.sent{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    
+    margin: 10px;
+    .message-item{
+        flex: 15;
+        font-family: 'Lato', sans-serif;
+        display: flex;
+        flex-direction: column;
+        .message-text{
+            color: #303030;
+            background-color: #3a86ff;
+            width: fit-content;
+            padding: 5px 10px;
+            margin: 2px 5px;
+            border-radius: 5px;
+            align-self: flex-end;
+            
+        }
+        .message-sender{
+            font-size: .8em;
+            margin-left: 10px;
+            align-self: flex-end;
+        }
+        .message-date{
+            font-size: .5em;
+            font-family: 'Lato', sans-serif;
+            align-self: flex-end;
+        }
+    
+    }
+    .profile-pic{
+        flex: 1;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+    }
+    
+}
+

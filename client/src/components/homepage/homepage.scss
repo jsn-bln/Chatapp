@@ -1,0 +1,63 @@
+.homepage-container{
+    margin: 5vw 7vw;
+    color: #303030;
+    float: right;
+    .homepage-hero{
+        font-family: 'Yusei Magic', sans-serif;
+        font-size: 3rem;
+        width: 40vw;
+        color: #3a86ff;
+        -webkit-text-stroke: 1px #495057;
+    }
+    .homepage-text{
+        font-family: 'Lato', sans-serif;
+        color: #f0efeb;
+        width: 35vw;
+    }
+    .homepage-btn{
+        background: #ffbe0b;
+        font-family: 'Yusei Magic', sans-serif;
+        color: #303030;
+    }
+    .homepage-btn:hover{
+        background: #f7b501;
+
+    }
+}
+.chat-action{
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    background: #ede0d4;
+    .chat-textfield{
+        flex: 16;
+    }
+    .chat-sendbtn{
+        flex: 1;
+    }
+}
+.border{
+    background: url('./chatbg.jpg');
+    background-size: cover;
+}
+
+@media(max-width: 700px){
+    .chat-action{
+        width: 100%;
+    }
+    .homepage-container{
+        display: flex;
+        margin-top: 10%;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 20%;
+        float: left;
+        .homepage-hero{
+            line-height: 40px;
+        }
+        .homepage-text{
+            line-height: 20px;
+        }
+        
+    }
+}

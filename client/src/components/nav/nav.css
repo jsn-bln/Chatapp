@@ -1,0 +1,37 @@
+.nav-toolbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 5vw;
+}
+
+.nav-toolbar .nav-brand-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav-toolbar .nav-brand-group .nav-brand {
+  font-size: 2em;
+  cursor: pointer;
+  font-family: 'Yusei Magic', sans-serif;
+  color: #303030;
+  -webkit-text-stroke: 1px #495057;
+}
+
+.nav-toolbar .nav-btn-group .nav-btn {
+  font-size: 1.1em;
+  color: #303030;
+  font-family: 'Yusei Magic', sans-serif;
+  -webkit-text-stroke: .5px #495057;
+}
+/*# sourceMappingURL=nav.css.map */

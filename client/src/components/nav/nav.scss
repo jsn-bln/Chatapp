@@ -1,0 +1,26 @@
+.nav-toolbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5vw;
+    
+    .nav-brand-group{
+        display: flex;
+        align-items: center;
+        .nav-brand{
+            font-size: 2em;
+            cursor: pointer;
+            font-family: 'Yusei Magic', sans-serif;
+            color: #303030;
+            -webkit-text-stroke: 1px #495057
+        }
+    }
+    .nav-btn-group{
+        .nav-btn{
+            font-size: 1.1em;
+            color: #303030;
+            font-family: 'Yusei Magic', sans-serif;
+            -webkit-text-stroke: .5px #495057
+        }
+    }
+}
