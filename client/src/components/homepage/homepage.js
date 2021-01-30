@@ -17,13 +17,13 @@ require('dotenv').config()
 
 
 firebase.initializeApp({
-    apiKey: process.env.apiKey,
-    authDomain: process.env.authDomain,
-    projectId: process.env.projectId,
-    storageBucket: process.env.storageBucket,
-    messagingSenderId: process.env.messagingSenderId,
-    appId: process.env.appId,
-    measurementId: process.env.measurementId
+    apiKey: "AIzaSyBGjNxK9uDHvhAXh4sB0YbgJO3_RFtTh1E",
+    authDomain: "chatapp-e5ab5.firebaseapp.com",
+    projectId: "chatapp-e5ab5",
+    storageBucket: "chatapp-e5ab5.appspot.com",
+    messagingSenderI: "828050009595",
+    appId: "1:828050009595:web:6f5a40555d02d6b501af5e",
+    measurementId: "G-XGF5GLB931"
 })
 console.log(process.env.apiKey)
 
