@@ -28,10 +28,64 @@
   -webkit-text-stroke: 1px #495057;
 }
 
+.nav-toolbar .nav-brand-group .hamburger-btn {
+  display: none;
+}
+
+.nav-toolbar .nav-brand-group .hamburger-btn .nav-icon-hamburger {
+  display: none;
+}
+
+.nav-toolbar .nav-brand-group .hamburger-close {
+  display: none;
+}
+
+.nav-toolbar .nav-brand-group .hamburger-close .nav-icon-close {
+  display: none;
+}
+
 .nav-toolbar .nav-btn-group .nav-btn {
   font-size: 1.1em;
   color: #303030;
   font-family: 'Yusei Magic', sans-serif;
   -webkit-text-stroke: .5px #495057;
+}
+
+.nav-appbar {
+  position: fixed;
+}
+
+.nav-appbar .nav-room {
+  font-family: 'Yusei Magic', sans-serif;
+  font-size: 1.5em;
+  color: #303030;
+  padding-right: 50px;
+}
+
+@media (max-width: 700px) {
+  .nav-appbar .nav-toolbar .nav-brand-group .hamburger-btn {
+    display: block;
+  }
+  .nav-appbar .nav-toolbar .nav-brand-group .hamburger-btn .nav-icon-hamburger {
+    display: block;
+  }
+  .nav-appbar .nav-toolbar .nav-brand-group .nav-icon {
+    display: none;
+  }
+  .nav-appbar .nav-toolbar .nav-brand-group .hamburger-close {
+    display: none;
+  }
+  .nav-appbar .nav-toolbar .nav-brand-group .hamburger-close .nav-icon-close {
+    display: none;
+  }
+}
+
+@media (max-width: 470px) {
+  .nav-appbar .nav-toolbar .nav-brand-group .nav-brand {
+    display: none;
+  }
+  .nav-appbar .nav-toolbar .nav-brand-group .nav-icon-close {
+    display: none;
+  }
 }
 /*# sourceMappingURL=nav.css.map */

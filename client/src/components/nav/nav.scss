@@ -14,6 +14,19 @@
             color: #303030;
             -webkit-text-stroke: 1px #495057
         }
+        .hamburger-btn{
+            display: none;
+            .nav-icon-hamburger{
+                display: none;
+            }
+        }
+        .hamburger-close{
+            display: none;
+            .nav-icon-close{
+                display: none;
+            }
+        }
+        
     }
     .nav-btn-group{
         .nav-btn{
@@ -21,6 +34,55 @@
             color: #303030;
             font-family: 'Yusei Magic', sans-serif;
             -webkit-text-stroke: .5px #495057
+        }
+    }
+}
+.nav-appbar{
+    position: fixed;
+    .nav-room{
+        font-family: 'Yusei Magic', sans-serif;
+        font-size: 1.5em;
+        color: #303030;
+        padding-right: 50px;
+    }
+}
+
+
+@media(max-width: 700px){
+    .nav-appbar{
+        .nav-toolbar{
+            .nav-brand-group{
+                .hamburger-btn{
+                    display: block;
+                    .nav-icon-hamburger{
+                        display: block;
+                    }
+                }
+                .nav-icon{
+                    display: none;
+                }
+                .hamburger-close{
+                    display: none;
+                    .nav-icon-close{
+                        display: none;
+                    }
+                }
+
+            }
+        }
+    }
+}
+@media(max-width: 470px){
+    .nav-appbar{
+        .nav-toolbar{
+            .nav-brand-group{
+                .nav-brand{
+                    display: none;
+                }
+                .nav-icon-close{
+                    display: none;
+                }
+            }
         }
     }
 }

@@ -12,6 +12,9 @@
   background: url("./chatbg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  -webkit-box-flex: 6;
+      -ms-flex: 6;
+          flex: 6;
 }
 
 .chat-container .chat-messages {

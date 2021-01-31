@@ -1,0 +1,17 @@
+.sidebar-container {
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
+  border-radius: 0;
+  display: block;
+}
+
+@media (max-width: 700px) {
+  .sidebar-container {
+    display: none;
+    position: absolute;
+    background: #dee2ff;
+    height: 86%;
+  }
+}
+/*# sourceMappingURL=sidebar.css.map */

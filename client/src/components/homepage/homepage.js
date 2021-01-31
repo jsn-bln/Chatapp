@@ -3,6 +3,7 @@ import './homepage.css'
 import {Button} from '@material-ui/core'
 import Chat from '../chat/chat'
 import Nav from '../nav/nav'
+import Sidebar from '../sidebar/sidebar'
 import {TextField, IconButton} from '@material-ui/core'
 import SendIcon from '@material-ui/icons/Send';
 
@@ -25,25 +26,26 @@ firebase.initializeApp({
     appId: "1:828050009595:web:6f5a40555d02d6b501af5e",
     measurementId: "G-XGF5GLB931"
 })
-console.log(process.env.apiKey)
 
 const auth = firebase.auth();
 const firestore = firebase.firestore();
+localStorage.setItem('room', 'messages')
 
 const Homepage = () => {
+
     const [user] = useAuthState(auth);
     const [message, setMessage] = useState('')
-    const messagesRef = firestore.collection('messages');
-    const query = messagesRef.orderBy('createdAt').limit(1000);
+    const messagesRef = firestore.collection(localStorage.getItem('room'));
+    const query = messagesRef.orderBy('createdAt')
     const [messages] = useCollectionData(query, { idField: 'id' });
     const date = moment().format('LLL');
-
+    
+    
     const signInWithGoogle = () => {
         const provider = new firebase.auth.GoogleAuthProvider();
         auth.signInWithPopup(provider).then((res) => {
             console.log(res.user.displayName, res.user.email, res.user.photoURL)
             localStorage.setItem('account_id',res.user.uid)
-
             
         }).catch((error) => {
             console.log(error.message + "error")
@@ -69,19 +71,23 @@ const Homepage = () => {
             <>
                 {
                 user?
-                <>
-                <Nav />
-                <div className="border">
-                    <Chat messages={messages} img={auth.currentUser.photoURL} name={auth.currentUser.displayName}/>
-                    <div className="chat-action">
-                        <TextField className="chat-textfield" value={message} onChange={e => setMessage(e.target.value)} 
-                        variant="outlined" placeholder="Enter message"/>
-                        <IconButton disabled={!message} onClick={sendMessage} className="chat-sendbtn" color="primary" component="span">
-                        <SendIcon fontSize="large"/>
-                        </IconButton>    
+                
+                <div className='main-container'>
+                    <Nav />
+                    <div className="border">
+                        <Sidebar />
+                        <Chat messages={messages} img={auth.currentUser.photoURL} name={auth.currentUser.displayName}/>
+                        <div className='homepage-dummy'></div>
                     </div>
+                    <div className="chat-action">
+                            <TextField className="chat-textfield" value={message} onChange={e => setMessage(e.target.value)} 
+                            variant="outlined" placeholder="Enter message"/>
+                            <IconButton disabled={!message} onClick={sendMessage} className="chat-sendbtn" color="primary" component="span">
+                            <SendIcon fontSize="large"/>
+                            </IconButton>    
+                        </div>
                 </div>
-                </>
+                
 
                 :
                 <>

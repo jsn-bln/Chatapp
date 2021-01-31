@@ -15,8 +15,6 @@ const Chat = (props) => {
         space.current.scrollIntoView({ behavior: 'smooth' });
     },[messages])
     
-    
-
     return(
         
     <div className='chat-container'>

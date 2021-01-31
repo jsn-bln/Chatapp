@@ -1,7 +1,9 @@
 import React from 'react'
-import {AppBar, Toolbar, Typography, Button} from '@material-ui/core'
+import {AppBar, Toolbar, Typography, Button, IconButton} from '@material-ui/core'
 import { createMuiTheme, ThemeProvider} from '@material-ui/core/styles';
 import MailOutlineIcon from '@material-ui/icons/MailOutline';
+import MenuOutlinedIcon from '@material-ui/icons/MenuOutlined';
+import CloseOutlinedIcon from '@material-ui/icons/CloseOutlined';
 import './nav.css'
 
 import firebase from 'firebase/app'
@@ -24,7 +26,11 @@ const Nav = () => {
         }
       });
     
-    
+    const chat_name = () => {
+        const name = localStorage.getItem('room')
+        if(name === 'messages') return "General"
+        return name
+    }
 
 
     const signInWithGoogle = () => {
@@ -40,7 +46,35 @@ const Nav = () => {
     const signOut = () => {
         auth.signOut();
         localStorage.setItem('account_id','')
+        localStorage.setItem('room', 'messages')
     }
+
+    const hamburgerBtn = () => {
+        const sidebar = document.querySelector('.sidebar-container')
+        const hamburgerBtn = document.querySelector('.hamburger-btn')
+        const hamburgerCloseBtn = document.querySelector('.hamburger-close')
+        const iconMenu = document.querySelector('.nav-icon-hamburger')
+        const iconCloseMenu = document.querySelector('.nav-icon-close')
+        sidebar.style.display = "block";
+        hamburgerBtn.style.display = "none";
+        hamburgerCloseBtn.style.display = "block";
+        iconMenu.style.display ="none";
+        iconCloseMenu.style.display = "block";
+        
+    }
+    const hamburgerCloseBtn = () => {
+        const sidebar = document.querySelector('.sidebar-container')
+        const hamburgerBtn = document.querySelector('.hamburger-btn')
+        const hamburgerCloseBtn = document.querySelector('.hamburger-close')
+        const iconMenu = document.querySelector('.nav-icon-hamburger')
+        const iconCloseMenu = document.querySelector('.nav-icon-close')
+        sidebar.style.display = "none";
+        hamburgerBtn.style.display = "block";
+        hamburgerCloseBtn.style.display = "none";
+        iconMenu.style.display ="block";
+        iconCloseMenu.style.display = "none";
+    }
+
 
     return(
         <>
@@ -50,8 +84,15 @@ const Nav = () => {
                 <Toolbar className='nav-toolbar'>
                     <div className='nav-brand-group'>
                         <MailOutlineIcon className='nav-icon' fontSize='large'/>
+                        <IconButton  className="hamburger-btn" onClick={hamburgerBtn}>
+                            <MenuOutlinedIcon className='nav-icon-hamburger' fontSize='large'/>
+                        </IconButton>
+                        <IconButton className="hamburger-close" onClick={hamburgerCloseBtn}>
+                            <CloseOutlinedIcon className='nav-icon-close' fontSize='large'/>
+                        </IconButton>
                         <Typography className='nav-brand' variant="h6"> Charat!</Typography>
                     </div>
+                    <div className="nav-room">{chat_name()} room</div>
                     <div className='nav-btn-group'>
                         <Button onClick={signOut} className="nav-btn" color="inherit">Logout</Button>
                     </div>
